@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoTech | Cadastro</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="./asset/favicon-32x32.png" type="image/x-icon">
+</head>
+<style>
+    
+</style>
+<body>
+
+    <header>
+        <a href="./index.html" style="text-decoration: none;"><img src="./asset/logo2.png" alt="">
+        <h1>AutoTech</h1>
+        </a>
+        <div>
+            <a class="cadastrar" href="#">Cadastrar</a>
+            <a class="entrar" href="./login.html">Entrar</a>
+        </div>
+
+    </header>
+
+    <div class="formulario">
+
+        <div class="logo">
+            <img src="./asset/logo2.png">
+            <h2>AutoTech</h2>
+            <p>Bem vindo a sua área de cadastro!</p>
+        </div>
+
+        <div id="box01" class="box">
+
+            <h2>Precisamos de algumas informações suas!</h2>
+            <div class="campoDigitacao" id="onecd">
+                <label for="inNome">Razão Social</label>
+                <input class="ipt" id="inNome" type="text" placeholder="Nome da empresa">
+            </div>
+            <div class="campoDigitacao">
+                <label for="inCnpj">CNPJ</label>
+                <input class="ipt" maxlength="18" id="inCnpj" type="text" placeholder="99.999.999/0001.99" onkeyup="MascaraCnpj()">
+            </div>
+            <div class="campoDigitacao">
+                <label for="inEmail">E-mail</label>
+                <input class="ipt" id="inEmail" type="text" placeholder="empresa@outlook.com">
+            </div>
+            <div class="divSenhas">
+                <div class="campoDigitacao">
+                    <label for="inSenha">Senha</label>
+                    <input class="ipt iptSecundario" id="inSenha" type="password" placeholder="********" onkeyup="SenhaForte()">
+                </div>
+                <div class="campoDigitacao">
+                    <label for="inConfirmacaoSenha">Confirmar Senha</label>
+                    <input class="ipt iptSecundario" id="inConfirmacaoSenha" type="password" placeholder="********">
+                </div>
+            </div>
+            <div class="verificadorSenha">
+                <div class="boxSenha" id="oneboxx">
+                    <div class="verificador">
+                        <img id="imgT1" src="./asset/traco.png">
+                        <span>6 Caracteres</span>
+                    </div>
+                    <div class="verificador">
+                        <img id="imgT2" src="./asset/traco.png">
+                        <span>Conter número</span>
+                    </div>
+                </div>
+                <div class="boxSenha">
+                    <div class="verificador">
+                        <img id="imgT3" src="./asset/traco.png">
+                        <span>Conter maiúscula</span>
+                    </div>
+                    <div class="verificador">
+                        <img id="imgT4" src="./asset/traco.png">
+                        <span>Caracter especial</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="cadastrar()" class="btNext">Próximo passo</button>
+        </div>
+
+    </div>
+    
+    <script src="./js/cadastro.js"></script>
+</body>
+</html>
+<script>
+
+function SenhaForte(){
+        var senha = document.querySelector('#inSenha');
+        var uper = document.querySelector('#imgT3');
+        var num = document.querySelector('#imgT2');
+        var tamanho = document.querySelector('#imgT1');
+        var especial = document.querySelector('#imgT4');
+
+        document.querySelector(".verificadorSenha").style.display = "flex";
+
+        if(senha.value.match(/[0-9]/)){
+            num.src = "./asset/check.png"
+        
+        }else{
+            num.src = "./asset/traco.png"
+        }
+
+        if(senha.value.match(/[A-Z]/)){
+            uper.src = "./asset/check.png"
+        }else{
+            uper.src = "./asset/traco.png"
+        }
+
+        if(senha.value.match(/[!\@\#\$\%\&\*]/)){
+            especial.src = "./asset/check.png"
+        }else{
+            especial.src = "./asset/traco.png"
+        }
+
+        if(senha.value.length < 6){
+            tamanho.src = "./asset/traco.png"
+        }else{
+            tamanho.src = "./asset/check.png"
+        }
+
+
+    }
+
+    
+
+    function cadastrar(){
+        const nome = inNome.value;
+        const cnpj = inCnpj.value;
+        const email = inEmail.value;
+        const senha = inSenha.value;
+        const nivel = 3;
+        const confirmacaoSenha = inConfirmacaoSenha.value;
+        const validacaoSenha = senha.match(/[0-9]/) && senha.match(/[A-Z]/) && senha.match(/[!\@\#\$\%\&\*]/) && senha.length >= 6
+
+        if(nome == '' || cnpj.length != 18 || !email.match(/[@]/) || !validacaoSenha || confirmacaoSenha != senha){
+            alert("Preencha os campos corretamente!")
+            return false
+        }else{
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nome,
+                    cnpj,
+                    email,
+                    senha,
+                    nivel
+                })
+            }).then(function(resposta){
+                if(resposta.ok){
+                    alert("Cadastrado com sucesso!")
+                    window.location = "./login.html"
+                }else{
+                    alert("Cadastro falhou!")
+                }
+            }).catch(function(resposta){
+                console.log(`#ERRO: ${resposta}`)
+            })
+        }
+
+    }
+
+</script>

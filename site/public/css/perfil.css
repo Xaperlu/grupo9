@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.navbar {
+    height: 100vh;
+    width: 20vw;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.blocoperfil {
+
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.blocoperfil img {
+    margin-top: 10px;
+    height: 120px;
+
+}
+
+.blocoperfil h2 {
+    margin-top: 20px;
+    margin-right: 70px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.guias {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    margin-top: 10%;
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.guias li {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.titleopcionais{
+
+    color: rgb(78, 78, 78);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#adicional{
+    margin-top: 20%;
+}
+
+.add{
+    text-decoration: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    color: transparent;
+    cursor: pointer;
+}
+
+
+
+.guias ion-icon{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    font-size: 25px;
+}
+
+
+.guias li a {
+    text-decoration: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    color: transparent;
+}
+
+
+
+.guias li a img {
+    height: 20px;
+}
+
+
+
+
+
+
+
+.janelainfo {
+
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.botoes {
+    height: 80px;
+    width: 55vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    position: absolute;
+    top: 3%;
+
+
+
+}
+
+.cima {
+
+    background-color: #cecfcf;
+    border-radius: 10px;
+    height: 70%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-left: 60px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cima ion-icon {
+
+    font-size: 40px;
+    position: absolute;
+    left: 0px;
+    background-color: #bebebe;
+    padding: 10px;
+}
+
+
+
+
+
+.card {
+    overflow: hidden;
+    height: 70%;
+    width: 70%;
+    background-color: #0f0f0f;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.detalheboll {
+    background-color: transparent;
+    height: 8%;
+    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detalheboll div {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+
+}
+
+.detalheboll #boll1 {
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+}
+
+.detalheboll #boll2 {
+    background-color: white;
+}
+
+.detalheboll #boll1After {
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    display: none;
+}
+
+.detalheboll #boll2After {
+    background-color: white;
+    display: none;
+}
+
+
+.cardfilho {
+    height: 90%;
+    width: 100%;
+    position: relative;
+}
+
+
+.areadasinfos {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    position: relative;
+}
+
+.infos {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45px;
+}
+
+.infos h3 {
+    color: whitesmoke;
+    font-size: 26px;
+}
+
+.editarinfo {
+    align-items: end;
+}
+
+.editarinfo input {
+    height: 20px;
+    margin-left: 10px;
+    background-color: #1d2027;
+    backdrop-filter: blur(10px);
+    border: none;
+    outline: 1px red;
+    color: whitesmoke;
+    padding-left: 10px;
+}
+
+
+.listadecampos {
+    background-color: transparent;
+    width: 100%;
+    height: 70%;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.editarDados {
+    background-color: transparent;
+    width: 100%;
+    height: 70%;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+}
+
+#funData{
+    text-align: center;
+}
+
+.campo {
+    background-color: transparent;
+}
+
+.campo .noeditsinfo {
+    display: flex;
+    align-items: end;
+
+}
+
+.campo div .title {
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    color: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+.campo div p {
+    color: rgb(111, 111, 111);
+    margin-left: 10px;
+}
+
+.confsenha{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.confsenha .divdeconfsenha{
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    height: 30%;
+    width: 40%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.confsenha .divdeconfsenha p{
+    color: #0f0f0f;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.divinput{
+    height: 40px;
+    width: 70%;
+    font-size: 16px;
+    border: none;
+    background-color: #454545e0;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    border-bottom:solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+
+
+}
+
+.divinput ion-icon{
+    position: absolute;
+    right: 5%;
+    
+    
+
+}
+
+#onsenha{
+    display: none;
+}
+
+#offsenha{
+    display: block;
+}
+
+ .divinput input{
+    height: 40px;
+    width: 85%;
+    font-size: 16px;
+    border: none;
+    background-color: #454545e0;
+    color: white;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom:solid 1px black;
+    text-align: center;
+    
+    
+}
+
+.confsenha div input::placeholder{
+    color: rgb(196, 196, 196);
+}
+
+.confsenha div button{
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background-color: #05ff1af6;
+    color: white;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 20px 1px rgba(45, 45, 45, 0.648);
+    cursor: pointer;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.areadasinfos img {
+    height: 60%;
+}
+
+
+
+
+.outroscadastros {
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #0f0f0f;
+    position: absolute;
+    top: 0px;
+}
+
+.botaoexit {
+    font-size: 40px;
+    transform: rotate(45deg);
+    background-color: rgb(193, 193, 193);
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    cursor: pointer;
+
+}
+
+.containerdentrocadastrarunidade {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+
+
+}
+
+
+
+.containerdentrocadastrarunidade h1 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    color: transparent;
+    opacity: 1;
+
+}
+
+.dadoscadastrounidade {
+    margin-top: 5%;
+    height: 60%;
+    width: 80%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+.inpcadastrarunidade {
+    border: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1d2027;
+    color: whitesmoke;
+}
+
+.inpcadastrarunidade::placeholder {
+    text-align: center;
+    color: rgba(245, 245, 245, 0.43);
+}
+
+.inpcadastrarunidade:focus {
+    border: solid 4px #45a0f5;
+
+}
+
+.dadoscadastrounidade select {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 3px #032f59;
+    background-color: #1d2027;    
+    color: white;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.dadoscadastrounidade button {
+    position: absolute;
+    bottom: 5%;
+    height: 60px;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(to left, #1ba40c, #39e326);
+    cursor: pointer;
+
+
+
+}
+
+.dadoscadastrounidade button:hover {
+    transition: all 1s linear;
+    font-size: 25px;
+
+}
+
+
+
+.editarunidhard {
+    background-color: transparent;
+    height: 35px;
+    width: 70px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    position: absolute;
+    left: 5.9%;
+    bottom: 3.4%;
+}
+
+.editarunidhard img {
+    height: 20px;
+    width: 20px;
+
+
+
+}
+
+
+
+#listadeunidadeparaupdate {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 60%;
+    width: 50%;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+    border-radius: 5px;
+
+}
+
+
+
+#listadehaerwareparaupdate, #listadeunidadedefuncionarioparaupdate {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 60%;
+    width: 50%;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+    border-radius: 5px;
+
+}
+
+#listadehaerwareparaupdate  li {
+
+    height: 40px;
+    width: 100%;
+    background-color: rgba(123, 123, 123, 0.411);
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px rgba(129, 129, 129, 0.216);
+    margin-top: 4px;
+    cursor: pointer;
+
+
+}
+
+#btnupdatehardware,
+#btnupdateunidade,
+#btnupdatefuncionario {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.campobotoes {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    position: relative;
+}
+
+
+
+
+.campobotoes button {
+    background-color: transparent;
+    height: 35px;
+    width: 70px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.campobotoes div {
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.campobotoes div button {
+    display: none;
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    height: 35px;
+    width: 70px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    position: absolute;
+    right: 0%;
+
+}
+
+.campobotoes div img {
+    display: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+    background-image: -webkit-linear-gradient(45deg, #45a0f5e3, #45a0f5);
+    padding: 0px 10px;
+    border-radius: 10px;transform: rotate(90deg);
+
+}
+
+.campobotoes button img {
+    display: none;
+    height: 20px;
+    width: 20px;
+    position: relative;
+
+
+}
+
+
+.divisor{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+@keyframes retate {
+    to {
+        transform: rotate(360deg);
+    }
+}

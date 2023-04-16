@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;700&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+    background-color: #0f0f0f;
+    position: absolute;
+}
+.formulario {
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+
+.formulario .box {
+    height: 90vh;
+    width: 33vw;
+    background-color: rgb(35, 35 ,35);
+    box-shadow: 0px 0px 10px 10px rgba(7, 7, 7, 0.395);
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 8vh -12vw 0 0;
+}
+
+.box h2{
+    text-align: center;
+    font-size: 25px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(left, #26e3c2, #45a0f5);
+    color: transparent;
+}
+
+#box01{
+    display: flex;
+    /* width: 40%; */
+}
+
+#box02{
+    display: none;
+}
+
+#box03{
+    display: none;
+}
+
+.step{
+    display: flex;
+    gap: 10px;
+}
+
+.fase{
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 50%;  
+}
+
+.atual{
+    background-color: white;
+}
+
+.campoDigitacao{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    margin-top: 0%;
+}
+
+.divSenhas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.verificadorSenha{
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+}
+
+.boxSenha{
+    display: flex;
+    flex-direction: column;
+    width: 14.5vw;
+}
+
+.verificador{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.verificador span{
+    display: flex;
+    align-items: center;
+}
+
+.verificador img{
+    height: 20px;
+    width: 20px;
+}
+
+.ipt{
+    height: 40px;
+    border: none;
+    background-color: #0f0f0f;
+    color: white;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30vw;
+}
+
+.iptSecundario{
+    width: 14.5vw;
+}
+
+.btNext{
+    width: 25vw;
+    height: 7vh;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0%;
+    background-image: -webkit-linear-gradient(75deg, #26e3c2, #45a0f5);
+    cursor: pointer;
+    color: white;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.logo h2{
+    font-size: 2rem;
+}
+
+.logo img{
+    width: 200px;
+    height: 200px;
+}
+
+@media only screen and (max-width: 600px){
+
+    body{
+        background-image: url(../asset/background2.jpg);
+        background-color: rgba(0, 0, 0, 0.352);
+        background-size: cover;
+        backdrop-filter: blur(10px);
+    }
+
+    .logo{
+        display: none;
+    }
+
+   header{
+    display: flex;
+    background-color: transparent;
+   }
+
+   
+   .formulario {
+    width: 100vw !important;
+    height: 1000px;
+    margin: 0;
+    border-radius: 0;
+    position: static;
+    background-color: transparent;
+}
+
+
+    .formulario .box{
+        width: 100vw !important;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+        position: static;
+        background-color: transparent;
+        
+    }
+
+    .formulario .box h2{
+        font-size: 30px;
+    }
+
+    #onecd{
+        margin-top: 85px;
+    }
+
+    .ipt{
+        height: 50px;
+        width: 60vw;
+        font-size: 16px;
+        background-color: transparent;
+        border-radius: 0px;
+        border-bottom: solid 2px grey;
+    }
+
+    .iptSecundario{
+        width: 60vw;
+    }
+
+    .divSenhas{
+        display: flex;
+        flex-direction: column;
+        width: 85vw;
+    }
+
+    .verificadorSenha{
+        margin-top: 20PX;
+        display: none;
+        width: 85vw;
+    }
+
+    .boxSenha{
+        display: flex;
+        align-items: start;
+        width: 42vw;
+        
+    }
+
+    #oneboxx{
+        margin-left: 43px;
+    }
+
+    .verificador span{
+        font-size: 10px;
+    }
+
+    .verificador img{
+        width: 10px;
+        height: 20px;
+        border-radius: 50%;
+        
+    }
+
+    .btNext{
+        width: 50vw;
+        height: 8vh;
+        font-size: 1.4rem;
+        margin-top: 10%;
+    }
+
+    .campoDigitacao label{
+        font-size: 1.2rem;
+    }
+
+    .campoDigitacao {
+        margin-top: 15%;
+       
+    }
+
+    
+
+
+}
